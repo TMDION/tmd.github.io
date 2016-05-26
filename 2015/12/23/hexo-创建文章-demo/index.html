@@ -1,0 +1,936 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="baidu-site-verification" content="h2kb8pAThS" />
+<meta name="google-site-verification" content="T4paq8LUe12P-csgAIJk82yntJpFN4-Ak2V2-Efl6Qw" />
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,node.js," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="总有刁民想害朕~" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="千里之行,始于足下总有刁民想害朕
+
+关于hexo 发布文章的一些标签的用法这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo 创建文章 demo">
+<meta property="og:url" content="http://timding.com/2015/12/23/hexo-创建文章-demo/index.html">
+<meta property="og:site_name" content="总有刁民想害朕~">
+<meta property="og:description" content="千里之行,始于足下总有刁民想害朕
+
+关于hexo 发布文章的一些标签的用法这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">
+<meta property="og:image" content="http://timding.com/images/blockquote.png">
+<meta property="og:image" content="http://timding.com/images/blockquote_demo.png">
+<meta property="og:image" content="http://timding.com/images/blockquote_demo1.png">
+<meta property="og:image" content="http://timding.com/images/codeblock.png">
+<meta property="og:image" content="http://timding.com/images/codeblockdemo.png">
+<meta property="og:image" content="http://timding.com/images/codeblockdemo1.png">
+<meta property="og:image" content="http://timding.com/images/pullquote.png">
+<meta property="og:image" content="http://timding.com/images/jsfiddle.png">
+<meta property="og:image" content="http://timding.com/images/gist.png">
+<meta property="og:image" content="http://timding.com/images/iframe.png">
+<meta property="og:image" content="http://timding.com/images/image.png">
+<meta property="og:image" content="http://timding.com/images/link.png">
+<meta property="og:image" content="http://timding.com/images/include.png">
+<meta property="og:image" content="http://timding.com/images/youtube.png">
+<meta property="og:image" content="http://timding.com/images/vimeo.png">
+<meta property="og:image" content="http://timding.com/images/include_post.png">
+<meta property="og:image" content="http://timding.com/images/include_assets.png">
+<meta property="og:image" content="http://timding.com/images/raw.png">
+<meta property="og:updated_time" content="2015-12-29T09:01:44.688Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo 创建文章 demo">
+<meta name="twitter:description" content="千里之行,始于足下总有刁民想害朕
+
+关于hexo 发布文章的一些标签的用法这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9a9d14f25cc73e4a3b4e37afb873ef04";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+            
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+  <title> hexo 创建文章 demo | 总有刁民想害朕~ </title>
+</head>
+
+<body id="body_yzk" itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">总有刁民想害朕~</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  本站访客数 <span id="busuanzi_container_site_uv">
+  <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 次
+</span>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+	
+  </form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'r39qJJobFTqnFNVngzLG','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                hexo 创建文章 demo
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-23T09:31:52+08:00" content="2015-12-23">
+              2015-12-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/日志/" itemprop="url" rel="index">
+                    <span itemprop="name">日志</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/23/hexo-创建文章-demo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/hexo-创建文章-demo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+			
+      	 <span id="/2015/12/23/hexo-创建文章-demo/"class="leancloud_visitors"  data-flag-title="hexo 创建文章 demo">
+              |   阅读次数
+            </span>
+      
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><blockquote class="blockquote-center"><h2>千里之行,始于足下</h2><br>总有刁民想害朕</blockquote>
+
+<h1 id="关于hexo_发布文章的一些标签的用法">关于hexo 发布文章的一些标签的用法</h1><h3 id="这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。</h3><a id="more"></a>
+<h2 id="1-_写作">1. 写作</h2><p>写作之前当然得先创建一个.md文件，使用命令<font color="#f00"><code>hexo new [layout] &lt;title&gt;</code></font>，其中layout默认为post，前面提过。</p>
+<p>（1）Layout布局</p>
+<p>Hexo提供了3种默认的布局，<font color="#f00"><code>post</code></font>、<font color="#f00"><code>page</code></font>和<font color="#f00"><code>draft</code></font>，路径分别为：<font color="#f00"><code>source/_posts</code></font>、<font color="#f00"><code>source</code></font>、<font color="#f00"><code>source/_draft</code></font>。如果你将在文章前置申明中，将layout设置为false，那么这篇文章将不会有任何的布局。</p>
+<p>（2）Filename文件名</p>
+<p>Hexo会默认将文章的标题当做文件名，但是你可以编辑<font color="#f00"><code>_config.yml</code></font>配置文件中的<font color="#f00"><code>new_post_name</code></font>来改变默认的文件名。</p>
+<p>例如：使用<font color="#f00"><code>hexo new hello</code></font>命令创建一篇为hello文章，Hexo会默认在_posts目录下给你创建一个名为hello.md的文件。假如你将<font color="#f00"><code>new_post_name</code></font>改为了:<font color="#f00"><code>year-:month-:day-:title.md</code></font>，那么hexo就自动帮你创建名为2015-12-23-hello.md（当前日期为2015年12月23）</p>
+<ul>
+<li><font color="#f00"><code>:title</code></font> 文章标题</li>
+<li><font color="#f00"><code>:year</code></font> 创建年份</li>
+<li><font color="#f00"><code>:month</code></font> 月份，如4月为04</li>
+<li><font color="#f00"><code>:day</code></font> 日期</li>
+<li><font color="#f00"><code>i_month</code></font> 月份，单数字，比如4月就是4</li>
+<li><font color="#f00"><code>i_day</code></font> 同上</li>
+</ul>
+<p>（3）Drafts草稿</p>
+<p>Hexo提供草稿功能，在<font color="#f00"><code>_drafts</code></font>目录下的文章不会发表到网站上，你可以通过命令<font color="#f00"><code>hexo publish [layout] &lt;title&gt;</code></font>发布你的草稿，改命令会将文章移到<font color="#f00"><code>_posts</code></font>目录下。但是也可以设置<font color="#f00"><code>_config.yml</code></font>配置文件的<font color="#f00"><code>render_drafts</code></font>字段，使草稿默认发布到站点中。</p>
+<p>（4）Scaffolds模版</p>
+<p>当你使用<font color="#f00"><code>new</code></font>命令创建一篇文章的时候，Hexo会根据scaffolds目录中的模版帮你生成文章。假如执行<font color="#f00"><code>hexo new photo &quot;My Gallery&quot;</code></font>，Hexo会尝试在scaffolds目录中去寻找photo.md的模版文件，然后基于它创建标题为My Gallery的文章。</p>
+<p>它的用处就是能够在模版中写入你某一类文章都要添加的共同内容，这样你基于模版创建文章的时候，就不用再重复写入那部分内容。</p>
+<h2 id="2-_前置声明">2. 前置声明</h2><p>顾名思义，就是写在文章前面的一块内容，为了对文章进行某些设置。它有两种书写方式：</p>
+<ol>
+<li>YAML方式，以三短线结束<figure class="highlight"><figcaption><span>YAML</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World&#10;date: 2015/12/23 20:46:25&#10;---</span><br></pre></td></tr></table></figure></li>
+<li>JSON方式，以三分号结束<figure class="highlight"><figcaption><span>JSON</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"title": "Hello World",</span><br><span class="line">"date": "2013/7/13 20:46:25"</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>下面看看有哪些参数可以设定：</p>
+<ul>
+<li><font color="#f00"><code>layout</code></font> 布局，一般不用写，默认就行</li>
+<li><font color="#f00"><code>title</code></font> 标题，这个必须要有</li>
+<li><font color="#f00"><code>date</code></font> 时间</li>
+<li><font color="#f00"><code>updated</code></font> 修改时间</li>
+<li><font color="#f00"><code>comments</code></font> 是否开启评论，默认为true</li>
+<li><font color="#f00"><code>tags</code></font> 文章标签</li>
+<li><font color="#f00"><code>categories</code></font> 文章分类</li>
+<li><font color="#f00"><code>permalink</code></font> 文章永久链接，一般不用写，默认就行<br>在写标签和分类的时候，可能会有多个的情况，多个标签可以无序排列的方式书写，而分类可能会有多级分类的情况。如何书写举例如下：</li>
+</ul>
+<figure class="highlight"><figcaption><span>YAML</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">categories: &#10;- Sports&#10;- Baseball&#10;tags:&#10;- Injury&#10;- Fight&#10;- Shocking</span><br></pre></td></tr></table></figure>
+<h2 id="3-_标签插件">3. 标签插件</h2><p>这里说的标签插件不同于文章中的标签，它可以帮助你在文章中快速嵌入一些特殊的内容。</p>
+<p>（1）Block Quote-块引用</p>
+<p>插入带有作者信息的应用，体现在Html上就是在<font color="#f00"><code>blockquote</code></font>标签下加入了<font color="#f00"><code>footer</code></font>标签。但是会给文章带来不一样的显示效果，书写格式非常简单。</p>
+<img src="/images/blockquote.png">
+<p>看下面的例子就大概知道怎么书写了，第一种最简单的方式就等于markdown里的<font color="#f00"><code>&gt;</code></font>语句。<br><img src="/images/blockquote_demo.png"><br>显示效果为（主题为light-ch）：<br><img src="/images/blockquote_demo1.png"><br>（2）Code Block代码块</p>
+<p>在文章中插入代码块可以使用下面方式书写<br><img src="/images/codeblock.png"><br>同样举个例子，用法一目了然。<br><img src="/images/codeblockdemo.png"><br>显示效果如下：<br><img src="/images/codeblockdemo1.png"><br>（3）Pull Quote</p>
+<p>这个插件可以帮助您在文章中插入重要引述。<br><img src="/images/pullquote.png"><br>（4）jsFiddle</p>
+<p>在文章中嵌入jsFiddle片段。<br><img src="/images/jsfiddle.png"></p>
+<p>（5）Gist</p>
+<p>嵌入Gist片段<br><img src="/images/gist.png"><br>（6）iFrame</p>
+<p>插入网页框架<br><img src="/images/iframe.png"><br>（7）Image</p>
+<p>插入图片，可以自定义大小<br><img src="/images/image.png"><br>（8）Link</p>
+<p>插入带有target=”_blank”属性值的链接。<br><img src="/images/link.png"><br>（9）Include Code</p>
+<p>从资源目录中插入代码片段。<br><img src="/images/include.png"><br>（10）Youtube</p>
+<p>在文章中插入Youtube视频。天朝的孩子就不用试了<br><img src="/images/youtube.png"><br>（11）Vimeo</p>
+<p>在文章中插入Vimeo视频。<br><img src="/images/vimeo.png"><br>（12）Include Posts</p>
+<p>包含其他文章的链接。<br><img src="/images/include_post.png"><br>（13）Include Assets</p>
+<p>包含文章资源。(具体怎么使用，还不太明白，后续再补充)<br><img src="/images/include_assets.png"><br>（14）Raw</p>
+<p>一些内容不想被主题渲染，可以使用该插件呈现原始状态。<br><img src="/images/raw.png"></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/22/第二天/" rel="next" title="第二天">
+                <i class="fa fa-chevron-left"></i> 第二天
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/25/设置SSH-keys/" rel="prev" title="设置SSH keys">
+                设置SSH keys <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="all" data-num-items="4"></div>
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/23/hexo-创建文章-demo/"
+           data-title="hexo 创建文章 demo" data-url="http://timding.com/2015/12/23/hexo-创建文章-demo/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="TD" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">TD</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">会当凌绝顶</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lovexinforever" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5493554807" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name"></p>
+            
+              <span class="links-of-author-item">
+                <a href="http://timding.com/" target="_blank">TD</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">千里之行,始于足下</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于hexo_发布文章的一些标签的用法"><span class="nav-number"></span> <span class="nav-text">关于hexo 发布文章的一些标签的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。"><span class="nav-number">0.1.</span> <span class="nav-text">这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_写作"><span class="nav-number">1.</span> <span class="nav-text">1. 写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_前置声明"><span class="nav-number">2.</span> <span class="nav-text">2. 前置声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-_标签插件"><span class="nav-number">3.</span> <span class="nav-text">3. 标签插件</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TD</span>
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"timding"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+	
+
+  	 <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("bxfgT9QrBnz3zDh52GjdSKXx-gzGzoHsz", "UUQbw9Nwe91rebEDsjxHuAOK");</script>
+<script>
+function showTime(Counter) {
+  var query = new AV.Query(Counter);
+  $(".leancloud_visitors").each(function() {
+    var url = $(this).attr("id").trim();
+    query.equalTo("url", url);
+    query.find({
+      success: function(results) {
+        if (results.length == 0) {
+          var content = $(document.getElementById(url)).text() + ': 0';
+          $(document.getElementById(url)).text(content);
+          return;
+        }
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+          $(document.getElementById(url)).text(content);
+        }
+      },
+      error: function(object, error) {
+        console.log("Error: " + error.code + " " + error.message);
+      }
+    });
+
+  });
+}
+
+function addCount(Counter) {
+  var Counter = AV.Object.extend("Counter");
+  url = $(".leancloud_visitors").attr('id').trim();
+  title = $(".leancloud_visitors").attr('data-flag-title').trim();
+  var query = new AV.Query(Counter);
+  query.equalTo("url", url);
+  query.find({
+    success: function(results) {
+      if (results.length > 0) {
+        var counter = results[0];
+        counter.fetchWhenSave(true);
+        counter.increment("time");
+        counter.save(null, {
+          success: function(counter) {
+            var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+            $(document.getElementById(url)).text(content);
+          },
+          error: function(counter, error) {
+            console.log('Failed to save Visitor num, with error message: ' + error.message);
+          }
+        });
+      } else {
+        var newcounter = new Counter();
+        newcounter.set("title", title);
+        newcounter.set("url", url);
+        newcounter.set("time", 1);
+        newcounter.save(null, {
+          success: function(newcounter) {
+              console.log("newcounter.get('time')="+newcounter.get('time'));
+            var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+            $(document.getElementById(url)).text(content);
+          },
+          error: function(newcounter, error) {
+            console.log('Failed to create');
+          }
+        });
+      }
+    },
+    error: function(error) {
+      console.log('Error:' + error.code + " " + error.message);
+    }
+  });
+}
+$(function() {
+  var Counter = AV.Object.extend("Counter");
+  if ($('.leancloud_visitors').length == 1) {
+    addCount(Counter);
+  } else if ($('.post-title-link').length > 1) {
+    showTime(Counter);
+  }
+}); 
+</script>
+  
+   
+</script>
+</body>
+</html>

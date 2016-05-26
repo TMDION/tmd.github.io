@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[总有刁民想害朕~]]></title>
+  <subtitle><![CDATA[随随便便]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://timding.com//"/>
+  <updated>2015-12-29T10:32:39.419Z</updated>
+  <id>http://timding.com//</id>
+  
+  <author>
+    <name><![CDATA[TD]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[github 上传代码 菜鸟超详细教程]]></title>
+    <link href="http://timding.com/2015/12/29/github-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81-%E8%8F%9C%E9%B8%9F%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
+    <id>http://timding.com/2015/12/29/github-上传代码-菜鸟超详细教程/</id>
+    <published>2015-12-29T08:52:30.000Z</published>
+    <updated>2015-12-29T10:32:39.419Z</updated>
+    <content type="html"><![CDATA[<h3 id="由于最近需要把代码上传到github上,之前只是用来fork别人的代码-所以写了这篇文章-运行环境windows-">由于最近需要把代码上传到github上,之前只是用来fork别人的代码.所以写了这篇文章.运行环境windows.</h3><a id="more"></a>
+<ol>
+<li>当然需要有github账号,没有的话,请移步<a href="http://github.com" target="_blank" rel="external"><font color="#a55">Github</font></a></li>
+<li>新建仓库<br><img src="/imgs/blog7/img1.png"><br>图中红色部分都可以新建</li>
+<li>填写名称，简介（可选），勾选Initialize this repository with a README选项，这是自动创建REAMDE.md文件，省的你再创建.<br><img src="/imgs/blog7/img2.png"></li>
+<li>用git shell 连接 github ssh.不会的话请移步<a href="http://timding.com/2015/12/25/%E8%AE%BE%E7%BD%AESSH-keys/#more"><font color="#a55">设置ssh keys</font></a></li>
+<li>clone刚才新建的repository 到本地，输入命令：<br><img src="/imgs/blog7/img3.png"><br><font color="#f00"><code>git clone https://github.com/lovexinforever/blog.git</code></font><br>这时会在目录下生成：<br><img src="/imgs/blog7/img4.png"></li>
+<li>将想上传的代码目录拷贝到此文件夹下：<br><img src="/imgs/blog7/img5.png"></li>
+<li>切换到Git shell 命令行下，输入命令：</li>
+</ol>
+<p><font color="#f00"><code>git init</code></font></p>
+<p><font color="#f00"><code>git add blog</code></font></p>
+<p><font color="#f00"><code>git commit -m &#39;blog&#39;</code></font></p>
+<p><font color="#f00"><code>git remote add origin https://github.com/lovexinforever/blog.git</code></font></p>
+<p><font color="#f00"><code>git push origin master</code></font><br>如果执行<font color="#f00"><code>git remote add origin https://github.com/lovexinforever/blog.git</code></font>，出现错误：</p>
+<p>　　<font color="#f00"><code>fatal: remote origin already exists</code></font><br>则执行以下语句：</p>
+<p>　　<font color="#f00"><code>git remote rm origin</code></font><br>再往后执行<font color="#f00"><code>git remote add origin https://github.com/lovexinforever/blog.git</code></font> 即可。</p>
+<p>在执行<font color="#f00"><code>git push origin master</code></font>时，报错：</p>
+<p>　　<font color="#f00"><code>error:failed to push som refs to.......</code></font><br>则执行以下语句：</p>
+<p>　　<font color="#f00"><code>git pull origin master</code></font><br>先把远程服务器github上面的文件拉先来，再push 上去。</p>
+<p><img src="/imgs/blog7/img6.png"></p>
+<p><br><br><br><br><br><br>至此,就把本地代码提交到远程github上了.  谢谢</p>
+<p>   欢迎转载!!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="由于最近需要把代码上传到github上,之前只是用来fork别人的代码-所以写了这篇文章-运行环境windows-">由于最近需要把代码上传到github上,之前只是用来fork别人的代码.所以写了这篇文章.运行环境windows.</h3>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://timding.com/tags/git/"/>
+    
+      <category term="github" scheme="http://timding.com/tags/github/"/>
+    
+      <category term="技术" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="日志" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[关于用 hexo d 失败的解决方法]]></title>
+    <link href="http://timding.com/2015/12/25/%E5%85%B3%E4%BA%8E%E7%94%A8-hexo-d-%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://timding.com/2015/12/25/关于用-hexo-d-失败的解决方法/</id>
+    <published>2015-12-25T05:25:05.000Z</published>
+    <updated>2015-12-29T08:56:24.899Z</updated>
+    <content type="html"><![CDATA[<h3 id="搭建_hexo，在执行_hexo_deploy_后,出现_error_deployer_not_found:github_的错误">搭建 hexo，在执行 hexo deploy 后,出现 <font color="#f00"><code>error deployer not found:github</code></font> 的错误</h3> <a id="more"></a>
+<p> 这是hexo 更新到3.0 会出现的错误</p>
+<p> <strong>解决方法</strong>  在_config.yml 中配置如下<br> <img src="/imgs/blog6/img1.png"><br> 其中红色部分是你的github名.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="搭建_hexo，在执行_hexo_deploy_后,出现_error_deployer_not_found:github_的错误">搭建 hexo，在执行 hexo deploy 后,出现 <font color="#f00"><code>error deployer not found:github</code></font> 的错误</h3>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://timding.com/tags/hexo/"/>
+    
+      <category term="技术" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2015/12/25  心情]]></title>
+    <link href="http://timding.com/2015/12/25/2015-12-25-%E5%BF%83%E6%83%85/"/>
+    <id>http://timding.com/2015/12/25/2015-12-25-心情/</id>
+    <published>2015-12-25T05:02:19.000Z</published>
+    <updated>2015-12-25T05:09:18.320Z</updated>
+    <content type="html"><![CDATA[<h3 id="特别的日子发生特别的事">特别的日子发生特别的事</h3><a id="more"></a>
+<p>   本来今天应该是很开心的日子,但是因为一些事情心里不开心.只希望一切都好吧</p>
+<p><br><br><br></p>
+<p>Best Regrads</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="特别的日子发生特别的事">特别的日子发生特别的事</h3>]]>
+    
+    </summary>
+    
+      <category term="随手记" scheme="http://timding.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    
+      <category term="心情" scheme="http://timding.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[设置SSH keys]]></title>
+    <link href="http://timding.com/2015/12/25/%E8%AE%BE%E7%BD%AESSH-keys/"/>
+    <id>http://timding.com/2015/12/25/设置SSH-keys/</id>
+    <published>2015-12-25T02:47:16.000Z</published>
+    <updated>2015-12-29T09:02:35.289Z</updated>
+    <content type="html"><![CDATA[<h3 id="本文主要详细解释怎样用git_连接远程仓库,至于git怎么下载安装,请自行百度-">本文主要详细解释怎样用git 连接远程仓库,至于git怎么下载安装,请自行百度.</h3><a id="more"></a>
+<ol>
+<li>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys。<font color="#f00"><code>ls -al ~/.ssh</code></font><br><img src="/imgs/blog4/img1.png"><br>2.如果不存在就没有关系，如果存在的话，直接删除.ssh文件夹里面所有文件：<br>3.输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车：<br><font color="#f00"><code>ssh-keygen -t rsa -C &quot;tim_ding@qq.com&quot;</code></font><br><img src="/imgs/blog4/img2.png"><br>4.然后它会提示要你输入passphrase（如上图，我没有输入直接回车，如果你输入的话，要记得，到时候会用到）。之后，如果出现类似下图：<br><img src="/imgs/blog4/img3.png"><br>5.然后键入以下指令：<br><font color="#f00"><code>ssh-agent -s</code></font><br><img src="/imgs/blog4/img4.png"><br>6.继续输入指令：<br><font color="#f00"><code>ssh-add ~/.ssh/id_rsa</code></font><br>7.输入之后可能出错,如果出错,继续执行,如果不出错,跳到第九步<br>8.输入以下命令<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eval <span class="escape">`s</span>sh-agent -s<span class="escape">`</span><br><span class="line"></span>ssh-add</span><br></pre></td></tr></table></figure>
+<img src="/imgs/blog4/img5.png"><br>9.到了这一步，就可以添加SSH key到你的Github账户了。键入以下指令，拷贝Key（先拷贝了，等一下可以直接粘贴）：<br><font color="#f00"><code>clip &lt; ~/.ssh/id_rsa.pub</code></font><br>10.然后到Github里面，点击右上角的设置图标：<br><img src="/imgs/blog4/img6.png"><br>11.在Settings sidebar那里，点击SSH keys：<br><img src="/imgs/blog4/img7.png"><br>12.点击Add SSH key：<br><img src="/imgs/blog4/img8.png"><br>13.输入Title，作为这个key的描述吧（你可以输入Personal MacBook Air，瞬间高大上）<br><img src="/imgs/blog4/img9.png"><br>14.然后这个Key就是刚刚拷贝的，你直接粘贴就好<br>15.点击Add Key：<br>16.输入你的Github密码即可完成SSH Key的添加。嗯，最后还是测试一下吧，键入以下命令：<br><font color="#f00"><code>ssh -T git@github.com</code></font><br>17.你可能会看到有警告，没事，输入“yes”就好。</li>
+</ol>
+<p>至此就可以连接远程仓库了.<br>                          谢谢</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="本文主要详细解释怎样用git_连接远程仓库,至于git怎么下载安装,请自行百度-">本文主要详细解释怎样用git 连接远程仓库,至于git怎么下载安装,请自行百度.</h3>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://timding.com/tags/git/"/>
+    
+      <category term="技术" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="日志" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo 创建文章 demo]]></title>
+    <link href="http://timding.com/2015/12/23/hexo-%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0-demo/"/>
+    <id>http://timding.com/2015/12/23/hexo-创建文章-demo/</id>
+    <published>2015-12-23T01:31:52.000Z</published>
+    <updated>2015-12-29T09:01:44.688Z</updated>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><h2>千里之行,始于足下</h2><br>总有刁民想害朕</blockquote>
+
+<h1 id="关于hexo_发布文章的一些标签的用法">关于hexo 发布文章的一些标签的用法</h1><h3 id="这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。</h3><a id="more"></a>
+<h2 id="1-_写作">1. 写作</h2><p>写作之前当然得先创建一个.md文件，使用命令<font color="#f00"><code>hexo new [layout] &lt;title&gt;</code></font>，其中layout默认为post，前面提过。</p>
+<p>（1）Layout布局</p>
+<p>Hexo提供了3种默认的布局，<font color="#f00"><code>post</code></font>、<font color="#f00"><code>page</code></font>和<font color="#f00"><code>draft</code></font>，路径分别为：<font color="#f00"><code>source/_posts</code></font>、<font color="#f00"><code>source</code></font>、<font color="#f00"><code>source/_draft</code></font>。如果你将在文章前置申明中，将layout设置为false，那么这篇文章将不会有任何的布局。</p>
+<p>（2）Filename文件名</p>
+<p>Hexo会默认将文章的标题当做文件名，但是你可以编辑<font color="#f00"><code>_config.yml</code></font>配置文件中的<font color="#f00"><code>new_post_name</code></font>来改变默认的文件名。</p>
+<p>例如：使用<font color="#f00"><code>hexo new hello</code></font>命令创建一篇为hello文章，Hexo会默认在_posts目录下给你创建一个名为hello.md的文件。假如你将<font color="#f00"><code>new_post_name</code></font>改为了:<font color="#f00"><code>year-:month-:day-:title.md</code></font>，那么hexo就自动帮你创建名为2015-12-23-hello.md（当前日期为2015年12月23）</p>
+<ul>
+<li><font color="#f00"><code>:title</code></font> 文章标题</li>
+<li><font color="#f00"><code>:year</code></font> 创建年份</li>
+<li><font color="#f00"><code>:month</code></font> 月份，如4月为04</li>
+<li><font color="#f00"><code>:day</code></font> 日期</li>
+<li><font color="#f00"><code>i_month</code></font> 月份，单数字，比如4月就是4</li>
+<li><font color="#f00"><code>i_day</code></font> 同上</li>
+</ul>
+<p>（3）Drafts草稿</p>
+<p>Hexo提供草稿功能，在<font color="#f00"><code>_drafts</code></font>目录下的文章不会发表到网站上，你可以通过命令<font color="#f00"><code>hexo publish [layout] &lt;title&gt;</code></font>发布你的草稿，改命令会将文章移到<font color="#f00"><code>_posts</code></font>目录下。但是也可以设置<font color="#f00"><code>_config.yml</code></font>配置文件的<font color="#f00"><code>render_drafts</code></font>字段，使草稿默认发布到站点中。</p>
+<p>（4）Scaffolds模版</p>
+<p>当你使用<font color="#f00"><code>new</code></font>命令创建一篇文章的时候，Hexo会根据scaffolds目录中的模版帮你生成文章。假如执行<font color="#f00"><code>hexo new photo &quot;My Gallery&quot;</code></font>，Hexo会尝试在scaffolds目录中去寻找photo.md的模版文件，然后基于它创建标题为My Gallery的文章。</p>
+<p>它的用处就是能够在模版中写入你某一类文章都要添加的共同内容，这样你基于模版创建文章的时候，就不用再重复写入那部分内容。</p>
+<h2 id="2-_前置声明">2. 前置声明</h2><p>顾名思义，就是写在文章前面的一块内容，为了对文章进行某些设置。它有两种书写方式：</p>
+<ol>
+<li>YAML方式，以三短线结束<figure class="highlight"><figcaption><span>YAML</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World&#10;date: 2015/12/23 20:46:25&#10;---</span><br></pre></td></tr></table></figure></li>
+<li>JSON方式，以三分号结束<figure class="highlight"><figcaption><span>JSON</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"title": "Hello World",</span><br><span class="line">"date": "2013/7/13 20:46:25"</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>下面看看有哪些参数可以设定：</p>
+<ul>
+<li><font color="#f00"><code>layout</code></font> 布局，一般不用写，默认就行</li>
+<li><font color="#f00"><code>title</code></font> 标题，这个必须要有</li>
+<li><font color="#f00"><code>date</code></font> 时间</li>
+<li><font color="#f00"><code>updated</code></font> 修改时间</li>
+<li><font color="#f00"><code>comments</code></font> 是否开启评论，默认为true</li>
+<li><font color="#f00"><code>tags</code></font> 文章标签</li>
+<li><font color="#f00"><code>categories</code></font> 文章分类</li>
+<li><font color="#f00"><code>permalink</code></font> 文章永久链接，一般不用写，默认就行<br>在写标签和分类的时候，可能会有多个的情况，多个标签可以无序排列的方式书写，而分类可能会有多级分类的情况。如何书写举例如下：</li>
+</ul>
+<figure class="highlight"><figcaption><span>YAML</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">categories: &#10;- Sports&#10;- Baseball&#10;tags:&#10;- Injury&#10;- Fight&#10;- Shocking</span><br></pre></td></tr></table></figure>
+<h2 id="3-_标签插件">3. 标签插件</h2><p>这里说的标签插件不同于文章中的标签，它可以帮助你在文章中快速嵌入一些特殊的内容。</p>
+<p>（1）Block Quote-块引用</p>
+<p>插入带有作者信息的应用，体现在Html上就是在<font color="#f00"><code>blockquote</code></font>标签下加入了<font color="#f00"><code>footer</code></font>标签。但是会给文章带来不一样的显示效果，书写格式非常简单。</p>
+<img src="/images/blockquote.png">
+<p>看下面的例子就大概知道怎么书写了，第一种最简单的方式就等于markdown里的<font color="#f00"><code>&gt;</code></font>语句。<br><img src="/images/blockquote_demo.png"><br>显示效果为（主题为light-ch）：<br><img src="/images/blockquote_demo1.png"><br>（2）Code Block代码块</p>
+<p>在文章中插入代码块可以使用下面方式书写<br><img src="/images/codeblock.png"><br>同样举个例子，用法一目了然。<br><img src="/images/codeblockdemo.png"><br>显示效果如下：<br><img src="/images/codeblockdemo1.png"><br>（3）Pull Quote</p>
+<p>这个插件可以帮助您在文章中插入重要引述。<br><img src="/images/pullquote.png"><br>（4）jsFiddle</p>
+<p>在文章中嵌入jsFiddle片段。<br><img src="/images/jsfiddle.png"></p>
+<p>（5）Gist</p>
+<p>嵌入Gist片段<br><img src="/images/gist.png"><br>（6）iFrame</p>
+<p>插入网页框架<br><img src="/images/iframe.png"><br>（7）Image</p>
+<p>插入图片，可以自定义大小<br><img src="/images/image.png"><br>（8）Link</p>
+<p>插入带有target=”_blank”属性值的链接。<br><img src="/images/link.png"><br>（9）Include Code</p>
+<p>从资源目录中插入代码片段。<br><img src="/images/include.png"><br>（10）Youtube</p>
+<p>在文章中插入Youtube视频。天朝的孩子就不用试了<br><img src="/images/youtube.png"><br>（11）Vimeo</p>
+<p>在文章中插入Vimeo视频。<br><img src="/images/vimeo.png"><br>（12）Include Posts</p>
+<p>包含其他文章的链接。<br><img src="/images/include_post.png"><br>（13）Include Assets</p>
+<p>包含文章资源。(具体怎么使用，还不太明白，后续再补充)<br><img src="/images/include_assets.png"><br>（14）Raw</p>
+<p>一些内容不想被主题渲染，可以使用该插件呈现原始状态。<br><img src="/images/raw.png"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote class="blockquote-center"><h2>千里之行,始于足下</h2></br>总有刁民想害朕</blockquote>
+
+<h1 id="关于hexo_发布文章的一些标签的用法">关于hexo 发布文章的一些标签的用法</h1><h3 id="这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。">这部分Docs分了8块内容，分别从写作、前置声明、标签插件、资源目录、数据文件、服务器、生成器、部署。也许翻译得不得当，但是我尽量把主要内容呈现出来并加上自己的理解。</h3>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://timding.com/tags/hexo/"/>
+    
+      <category term="node.js" scheme="http://timding.com/tags/node-js/"/>
+    
+      <category term="技术" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="日志" scheme="http://timding.com/categories/%E6%8A%80%E6%9C%AF/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[第二天]]></title>
+    <link href="http://timding.com/2015/12/22/%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
+    <id>http://timding.com/2015/12/22/第二天/</id>
+    <published>2015-12-22T07:23:55.000Z</published>
+    <updated>2015-12-25T04:43:45.466Z</updated>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><h1>世上无难事,只怕有心人</h1><br>丁洋</blockquote>
+
+
+
+<h3 id="Another_deeper_heading">Another deeper heading</h3> <a id="more"></a>
+<figure class="highlight cpp"><figcaption><span>lang java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> insertSort &#123;   </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">insertSort</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> a[]=&#123;</span><br><span class="line">            <span class="number">49</span>, <span class="number">38</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>, <span class="number">78</span>, <span class="number">34</span>, <span class="number">12</span>, <span class="number">64</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">62</span>, <span class="number">99</span>, <span class="number">98</span>, <span class="number">54</span>, <span class="number">56</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">23</span>,</span><br><span class="line"></span><br><span class="line">                    <span class="number">34</span>, <span class="number">15</span>, <span class="number">35</span>, <span class="number">25</span>, <span class="number">53</span>, <span class="number">51</span></span><br><span class="line">        &#125; ;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; a.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> j = i - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            temp = a[i];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (; j &gt;= <span class="number">0</span> &amp;&amp; temp &lt; a[j]; j--) &#123;</span><br><span class="line"></span><br><span class="line">                a[j + <span class="number">1</span>] = a[j];  <span class="comment">//将大于temp 的值整体后移一个单位   </span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            a[j + <span class="number">1</span>] = temp;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">            System.out.println(a[i]);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> Paragraphs are separated<br>by a blank line.</p>
+<p>Leave 2 spaces at the end of a line to do a<br>line break</p>
+<p>Text attributes <em>italic</em>, <strong>bold</strong>,<br><code>monospace</code>, <del>strikethrough</del> .</p>
+<p>Shopping list:</p>
+<ul>
+<li>apples</li>
+<li>oranges</li>
+<li>pears</li>
+</ul>
+<p>Numbered list:</p>
+<ol>
+<li>apples</li>
+<li>oranges</li>
+<li>pears</li>
+</ol>
+<p>The rain—not the reign—in<br>Spain.</p>
+<p>A <a href="http://www.timding.com" target="_blank" rel="external">link</a>.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote class="blockquote-center"><h1>世上无难事,只怕有心人</h1></br>丁洋</blockquote>
+
+
+
+<h3 id="Another_deeper_heading">Another deeper heading</h3>]]>
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://timding.com/tags/markdown/"/>
+    
+      <category term="node.js" scheme="http://timding.com/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[新的开始]]></title>
+    <link href="http://timding.com/2015/12/21/test-1-%E6%B5%8B%E8%AF%951/"/>
+    <id>http://timding.com/2015/12/21/test-1-测试1/</id>
+    <published>2015-12-21T10:18:18.000Z</published>
+    <updated>2015-12-23T05:50:46.759Z</updated>
+    <content type="html"><![CDATA[<p>###新的 开始<br>这是<strong><em>新的开始</em></strong>，我用hexo创建了第一篇文章。</p>
+<a id="more"></a>
+<p>感觉非常好。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>###新的 开始<br>这是<strong><em>新的开始</em></strong>，我用hexo创建了第一篇文章。</p>]]>
+    
+    </summary>
+    
+      <category term="开始" scheme="http://timding.com/tags/%E5%BC%80%E5%A7%8B/"/>
+    
+      <category term="日记" scheme="http://timding.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="日志" scheme="http://timding.com/categories/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+</feed>
